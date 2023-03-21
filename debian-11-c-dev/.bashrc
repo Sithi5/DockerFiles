@@ -32,4 +32,4 @@ parse_git_branch() {
 }
 
 # Set the prompt
-PS1="${COLOR_BLUE}\u@\h ${COLOR_GREEN}\w ${COLOR_YELLOW}\$(parse_git_branch)${COLOR_RESET} $ "
+PS1="${COLOR_WHITE}\u@\h in ${COLOR_YELLOW}\w ${COLOR_CYAN}\$(parse_git_branch)${COLOR_RESET} $ "
