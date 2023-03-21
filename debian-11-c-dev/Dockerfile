@@ -2,6 +2,7 @@ FROM debian:11
 
 RUN apt-get update && \
     apt-get install -y build-essential valgrind vim git man-db && \
+    apt-get install -y inetutils-ping && \ # For ft_ping 42 project
     rm -rf /var/lib/apt/lists/*
 
 VOLUME /shared
