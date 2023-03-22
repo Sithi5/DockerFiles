@@ -14,6 +14,9 @@ alias ..="cd .."
 alias ll="ls -l"
 alias la="ls -a"
 
+# Dir alias
+alias shareddir='cd /shared'
+
 # END OF ALIAS
 
 # Define some color codes
@@ -28,8 +31,8 @@ COLOR_RESET='\033[0m'
 
 # Define function to show git branch name in prompt
 parse_git_branch() {
-  git rev-parse --abbrev-ref HEAD 2>/dev/null | sed 's/^/ (/' | sed 's/$/)/'
+    git rev-parse --abbrev-ref HEAD 2>/dev/null | sed 's/^//'
 }
 
 # Set the prompt
-PS1="${COLOR_WHITE}\u@\h in ${COLOR_YELLOW}\w ${COLOR_CYAN}\$(parse_git_branch)${COLOR_RESET} $ "
+PS1="${COLOR_GREEN}Container: ${COLOR_WHITE}\u@\h in ${COLOR_YELLOW}\w ${COLOR_CYAN}\$(parse_git_branch)${COLOR_RESET} $ "
