@@ -2,8 +2,11 @@ FROM debian:11
 
 RUN apt-get update && \
     apt-get install -y build-essential valgrind vim git man-db && \
-    apt-get install -y inetutils-ping && \ # For ft_ping 42 project
+    apt-get install -y inetutils-ping traceroute && \
     rm -rf /var/lib/apt/lists/*
+
+# ping for ft_ping 42 project
+# traceroute for ft_traceroute 42 project
 
 VOLUME /shared
 
