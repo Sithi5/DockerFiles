@@ -20,5 +20,5 @@ CMD ["bash"]
 # docker build -t my-image .
 
 # to run it with a shared directory:
-# docker run -it -v /path/to/host/dir:/shared my-image
+# docker run -it --name debian11 -v /path/to/host/dir:/shared my-image
 
