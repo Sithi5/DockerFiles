@@ -1,7 +1,9 @@
 FROM debian:11
 
 RUN apt-get update && \
-    apt-get install -y build-essential valgrind vim git man-db bc python3  && \
+    apt-get install -y vim git man-db bc procps \
+    build-essential valgrind \
+    python3 python3-pip python3-venv  && \
     rm -rf /var/lib/apt/lists/*
 
 # ping for ft_ping 42 project
